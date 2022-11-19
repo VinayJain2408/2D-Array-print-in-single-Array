@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2d array</title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <script>
+        let numbers =[1,[2,3],4,[5,16],7,8,9];
+        let array =[]
+      for(let i=0 ; i<numbers.length;  i++){
+        if(typeof(numbers[i]) === "object"){
+           for(let j=0; j< numbers[i].length; j++){
+            array.push(numbers[i][j])
+           }
+        }
+        else{
+            array.push(numbers[i])
+            
+        }
+        
+      }
+      console.log(array);
+      let total = 0;
+      for(let a =0; a<array.length; a++){
+        
+        total += array[a];
+      }
+      console.log(total)
+    </script>
+</body>
+</html>
